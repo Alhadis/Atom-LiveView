@@ -5,5 +5,8 @@
 	"main": "lib/atom-live-view.js",
 	"engines": {
 		"atom": ">=1.25.0"
+	},
+	"dependencies": {
+		"mapped-disposable": "^1.0.2"
 	}
 }
