@@ -1,7 +1,6 @@
 "use strict";
 
 module.exports = {
-	bail: true,
 	require: [
 		"chai/register-should",
 		"mocha-when/register",
