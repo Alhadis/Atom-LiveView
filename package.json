@@ -5,6 +5,12 @@
 	"license": "ISC",
 	"main": "lib/atom-live-view.js",
 	"atomTestRunner": "atom-mocha",
+	"eslintConfig": {
+		"extends": "@alhadis/eslint-config/atom",
+		"rules": {
+			"consistent-this": 0
+		}
+	},
 	"engines": {
 		"atom": ">=1.25.0"
 	},
@@ -12,7 +18,13 @@
 		"mapped-disposable": "^1.0.3"
 	},
 	"devDependencies": {
+		"@alhadis/eslint-config": "^1.2.0",
 		"atom-mocha": "^2.1.0",
-		"mocha-when": "^1.0.0"
+		"mocha-when": "^1.0.0",
+		"eslint":     "^5.16.0"
+	},
+	"scripts": {
+		"lint": "npx eslint --ext mjs,js -- .",
+		"test": "atom -t test"
 	}
 }

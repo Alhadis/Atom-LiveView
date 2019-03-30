@@ -119,7 +119,7 @@ describe("ObservedKeyList", () => {
 		describe("If the key is already observed", () =>
 			it("does nothing", async () => {
 				let calls = 0;
-				let kl = new ObservedKeyList(() => ++calls);
+				const kl = new ObservedKeyList(() => ++calls);
 				kl.add("editor.fontSize");
 				await wait(10);
 				expect(calls).to.equal(1);
@@ -169,15 +169,15 @@ describe("ObservedKeyList", () => {
 		});
 		
 		it("fires its callback in its own context", async () => {
-			let ctx = null;
-			const kl = new ObservedKeyList(function(){ ctx = this; });
+			let context = null;
+			const kl = new ObservedKeyList(function(){ context = this; });
 			kl.add("editor.fontSize");
 			await wait(10);
-			expect(ctx).to.equal(kl);
+			expect(context).to.equal(kl);
 			
 			atom.config.set("editor.fontSize", defaultSize * 2);
 			await wait(10);
-			expect(ctx).to.equal(kl);
+			expect(context).to.equal(kl);
 		});
 		
 		when("the key is changed repeatedly", () =>
