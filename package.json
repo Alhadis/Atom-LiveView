@@ -2,6 +2,8 @@
 	"name": "atom-live-view",
 	"version": "v0.0.0",
 	"description": "Base class for implementing a live previewer which renders files asynchronously as they're edited.",
+	"keywords": ["live-preview", "atom", "atom-package", "realtime", "live", "previewer"],
+	"repository": "https://github.com/Alhadis/Atom-LiveView",
 	"license": "ISC",
 	"main": "lib/atom-live-view.js",
 	"atomTestRunner": "atom-mocha",
