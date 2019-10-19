@@ -21,9 +21,8 @@
 	},
 	"devDependencies": {
 		"@alhadis/eslint-config": "^1.2.0",
-		"atom-mocha": "^2.1.0",
-		"mocha-when": "^1.0.0",
-		"eslint":     "^5.16.0"
+		"atom-mocha": "^2.2.1",
+		"eslint":     "^6.5.1"
 	},
 	"scripts": {
 		"lint": "npx eslint --ext mjs,js -- .",
